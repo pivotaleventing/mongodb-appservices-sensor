@@ -1,7 +1,7 @@
 exports = function(request){
   if(context.request.httpMethod === "POST" && request.body) {
     const body = EJSON.parse(request.body.text());
-    console.log(EJSON.stringify(request.body.text()));
+    // console.log(EJSON.stringify(request.body.text()));
     const timestamp = Date.now();
     const device_id = body.esp8266id;
     const software_version = body.software_version;
