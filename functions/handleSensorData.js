@@ -6,7 +6,7 @@ exports = function(request){
     const device_id = body.esp8266id;
     const software_version = body.software_version;
 
-    let collection = context.services.get("Cluster0").db("Cluster0").collection(device_id);
+    let collection = context.services.get("mongodb-atlas").db("Cluster0").collection(device_id);
     
     let results = [];
     
